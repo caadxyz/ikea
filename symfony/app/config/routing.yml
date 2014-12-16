@@ -1,0 +1,3 @@
+ikea_products:
+    resource: "@IkeaProductsBundle/Resources/config/routing.yml"
+    prefix:   /

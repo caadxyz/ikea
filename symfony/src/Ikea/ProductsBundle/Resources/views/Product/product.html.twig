@@ -1,0 +1,9 @@
+﻿{% extends "IkeaProductsBundle::layout.html.twig" %}
+{% block wrapper %}
+		<h1>Product : {{productDetails.name}}</h1>
+		<img src="{{productDetails.image}}" alt="{{productDetails.name}}" />
+		<p>Category : {{productDetails.category}}</p>
+		<p>Description : {{productDetails.description}}</p>
+		<p>{{productDetails.height}}</p>
+		<p>{{productDetails.width}}</p>
+{% endblock %}

@@ -1,0 +1,7 @@
+ikea_products_homepage:
+    path:     /home
+    defaults: { _controller: IkeaProductsBundle:App:index }
+
+ikea_products_details:
+    path:     /product/{name}
+    defaults: { _controller: IkeaProductsBundle:App:product}

@@ -1,0 +1,36 @@
+<?php
+
+class Catalog {
+
+    public $name;
+    public $products;
+
+    public function __construct($name) {
+        $this->name = $name;
+        $this->products = array();
+    }
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function addProduct($product) {
+        array_push($this->products, $product);
+    }
+
+    public function toJson($fileName) {
+        try {
+            if (file_exists($fileName)) {
+                unlink($fileName);
+            }
+            $fp = fopen($fileName, 'a');
+            fwrite($fp, json_encode($this->products));
+            fclose($fp);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+}
+
+?>

@@ -1,0 +1,7 @@
+<?php
+  define("HOST", "mysql.info.unicaen.fr");
+  define("DB_NAME", "21208191_prod");
+  define("USER", "21208191");
+  define("PASSWORD", "4A41E54");
+    
+?>

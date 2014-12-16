@@ -1,0 +1,12 @@
+﻿{% extends "IkeaProductsBundle::layout.html.twig" %}
+{% block wrapper %}
+		<h1>Welcome to IKEA !</h1>
+		<h2>List of products :</h2>
+		<ul>
+		    {% for product in productsList %}
+		        <li>
+		        	<a href='{{ path('ikea_products_details',{'name': product.id}) }}'>{{ product.name }} ({{ product.category }})</a>
+		        </li>
+		    {% endfor %}
+		</ul>
+{% endblock wrapper %}
